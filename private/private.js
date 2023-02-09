@@ -1,3 +1,29 @@
+// Set values from local storage if we have it
+document.getElementById('about_me_title').style.display = 'none'
+
+document.getElementById("firstName_value").innerHTML = localStorage.getItem('first_name')
+document.getElementById("lasttName_value").innerHTML = localStorage.getItem('last_name')
+document.getElementById("about_me_value").innerHTML = localStorage.getItem('about')
+
+
+if('mail' in localStorage) {
+  document.getElementById("mail_value").innerHTML = localStorage.getItem('mail')
+  document.getElementById("mail_icon").style.display = 'block'
+}
+if('mobile' in localStorage) {
+  document.getElementById("mobile_value").innerHTML = localStorage.getItem('mobile')
+  document.getElementById("phone_icon").style.display = 'block'
+}
+if('about' in localStorage) {
+  document.getElementById("about_me_value").innerHTML = localStorage.getItem('about')
+  document.getElementById('about_me_title').style.display = 'block'
+}
+
+let imgURL = window.localStorage.getItem('imgURL')
+if('imgURL' in localStorage ) {
+  document.getElementById('profile_img').innerHTML = '<img src="' + imgURL + '" />';
+}
+
 
 // FirstName
 // -------------------------------------------------------------------
@@ -5,10 +31,12 @@
 let inputFirstName = document.getElementById('input_firstName');
 
 inputFirstName.addEventListener("input", function() {
+
     let firstNameValue = inputFirstName.value
     document.getElementById("firstName_value").innerHTML = firstNameValue
+    // dict['firstName']=firstNameValue
+    saveData('first_name' , firstNameValue)
 });
-
 
 
 // LastName
@@ -16,9 +44,10 @@ inputFirstName.addEventListener("input", function() {
 // -------------------------------------------------------------------
 let inputLastName = document.getElementById('input_lastName');
 inputLastName.addEventListener("input", function() {
-    document.getElementById("lasttName_value").innerHTML = inputLastName.value
+    let lastNameValue = inputLastName.value
+    document.getElementById("lasttName_value").innerHTML = lastNameValue
+    saveData('last_name' , lastNameValue)
 });
-
 
 
 // About Me 
@@ -34,6 +63,7 @@ inputAboutMe.addEventListener("input", function() {
   }else {
     document.getElementById('about_me_title').style.display = 'none'
   }
+  saveData('about' , aboutMeValue)
 });
 
 
@@ -51,6 +81,7 @@ inputMail.addEventListener("input", function() {
     }else {
       document.getElementById("mail_icon").style.display = 'none'
     }
+    saveData('mail' , MailValue)
 });
 
 // Mobile
@@ -65,6 +96,7 @@ inputMobile.addEventListener("input", function() {
   }else {
     document.getElementById("phone_icon").style.display = 'none'
   }
+  saveData('mobile' , MobileValue)
 });
 
 // Upload Image
@@ -84,10 +116,21 @@ chooseFile.addEventListener("change", function () {
       fileReader.readAsDataURL(files);
       fileReader.addEventListener("load", function () {
         imgPreview.innerHTML = '<img src="' + this.result + '" />';
-      });    
+        window.localStorage.setItem('imgURL' , fileReader.result)
+      });
+  
     }
   }
 
 
+// Save Data in local Storage
+function saveData(k , v) {
+  window.localStorage.setItem(k , v)
+}
 
 
+
+document.getElementById('next').addEventListener('click' , function() {
+  
+  document.getElementById('next').setAttribute("href" , "../experience/experience.html")
+})

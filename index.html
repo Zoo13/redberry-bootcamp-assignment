@@ -15,8 +15,13 @@
     </header>
     <main>
         <a href="./private/private.html">
-            <button id="btn"> ᲠᲔᲖᲘᲣᲛᲔᲡ ᲓᲐᲛᲐᲢᲔᲑᲐ </button>
+            <button id="btn" onclick=clearLocalStorage()> ᲠᲔᲖᲘᲣᲛᲔᲡ ᲓᲐᲛᲐᲢᲔᲑᲐ </button>
         </a>
     </main>
 </body>
+<script> 
+    function clearLocalStorage ( ) {
+        localStorage.clear()
+    }
+</script>
 </html>
