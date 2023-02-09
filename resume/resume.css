@@ -1,34 +1,28 @@
-body {
-    max-width: 1920px;
-    display: flex;
-}
+/* RightSide 1/3 Page Style start*/
 body , h1 , h2 , h3 , h4 , h5 , p {
     margin: 0;
     padding: 0;
 }
-#left_side {
-    max-width: 798px;
-    background-color: #F9F9F9;
-    padding: 47px 150px 0 150px;
-    line-height: 21px;
-}
 
-main {
-    border-bottom: 1px solid #C1C1C1;
+.Congratulation_box{
+    width: 427px;
+    height: 167px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 110%;
 }
-#header_box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: solid 1px black;
-    padding-bottom: 12px;
-    margin-bottom: 76px;
+.Congratulation_box p {
+    font-size: 28px !important ;
+    font-weight: 500 !important;
+    margin: 39.5px 33px 41.5px 30px;
 }
-h1 {
-    font-size: 24px;
-}
-h4 {
-    font-size: 20px;
+.Congratulation_box img {
+    position: absolute;
+    right: 11.44px;
+    top: 17.44px;
+    width: 13.13px;
+    height: 13.13px;
 }
 #back_arrow{
     position: absolute;
@@ -43,128 +37,12 @@ h4 {
     border-radius: 50px;
 }
 
-input {
-    padding: 0;
-    font-size: 16px;
-    padding-left: 16px;
-}
-
-::placeholder {
-    font-size: 16px;
-    position: absolute;
-    top: 13px;
-    left: 16px;
-}
-
-h3 {
-    font-size: 16px;
-}
-h5 {
-    font-size: 14px;
-    font-weight: 300;
-}
-
-textarea {
-    width: 780px;
-    height: 164px;
-    border: 1px solid #BCBCBC;
-    border-radius: 4px;
-    resize: none;
-    padding: 13px 0 0 16px;
-    font-size: 16px;
-}
-
-.institute  input {
-    width: 780px;
-    height: 46px;
-    border: 1px solid #BCBCBC;
-    border-radius: 4px;
-}
-.institute  {
-    margin-bottom: 31px;
-}
-.description {
-    margin-bottom: 54px;
-}
-
-
-input:focus {
-    font-size: 16px;
-}
-.inputDescr {
-    margin-bottom: 8px;
-}
-.validDescr {
-    margin-top: 8px;
-}
-
-.degree_endDate {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 31px;
-    margin-bottom: 34px;
-}
-.endDate input {
-    width: 339px;
-    height: 46px;
-    border-radius: 4px;
-    border: 1px #BCBCBC solid;
-    padding-right: 14px;
-}
-select {
-    font-size: 16px;
-    padding-left: 16px;
-    width: 371px;
-    height: 48px;
-    border-radius: 4px;
-    border: 1px #BCBCBC solid;
-}
-
-#addDescrBtn {
-    background-color: #62A1EB;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    width: 289px;
-    height: 48px;
-    margin-top: 46px;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 200px;
-    margin-bottom: 65px;
- }
- .nextBtn {
-     width: 151px;
-     height: 48px;
-     font-size: 16px;
-     background-color: #6B40E3;
-     color: white;
-     border: none;
-     border-radius: 4px;
- }
-
-.backBtn {
-    width: 113px;
-    height: 48px;
-    font-size: 16px;
-    background-color: #6B40E3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-}
-
-
-
-
-
-/* RightSide 1/3 Page Style start*/
-
 #rightSide {
     width: 822px;
     position: relative;
+    height: 1080px;
+    margin: 54px auto ;
+    border: 1px solid black;
 }
 .profile_box {
     width: 662px;

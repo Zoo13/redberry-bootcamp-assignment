@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/experience/experience.css">
+    <link rel="stylesheet" href="experience.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <a href="/index.html">
+    <a href="../index.html">
         <div id="back_arrow">
-            <img src="/Icons/Vector.svg">
+            <img src="../icons/Vector.svg">
         </div>
     </a>
     <div id="left_side">
@@ -25,39 +25,39 @@
         <main>
             <div class="position">
                 <h3 class="inputDescr"> თანამდებობა </h3>
-                <input placeholder="დეველოპერი, დიზაინერი, ა.შ.">
+                <input placeholder="დეველოპერი, დიზაინერი, ა.შ." id="input_position">
                 <h5 class="validDescr"> მინიმუმ 2 სიმბოლო </h5>
             </div>
             <div class="employer">
                 <h3 class="inputDescr"> დამსაქმებელი </h3>
-                <input placeholder="დამსაქმებელი">
+                <input placeholder="დამსაქმებელი" id="input_employer">
                 <h5 class="validDescr"> მინიმუმ 2 სიმბოლო </h5>
             </div>
             <div class="start_end">
                 <div class=start>
                     <h3 class="inputDescr"> დაწყების რიცხვი </h3>
-                    <input type="date">
+                    <input type="date" id="input_exp_start_date">
                 </div>
                 <div class=end>
                     <h3 class="inputDescr"> დამთავრების რიცხვი </h3>
-                    <input type="date">
+                    <input type="date" id="input_exp_end_date" >
                 </div>
             </div>
             <div class="description">
                 <h3 class="inputDescr"> აღწერა </h3>
-                <textarea placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
+                <textarea placeholder="როლი თანამდებობაზე და ზოგადი აღწერა" id="input_job_description"></textarea>
             </div>
         </main>
         <button id="addDescrBtn"> მეტი გამოცდილების დამატება </button>
         <footer>
-            <a href="/private/private.html"><button class="backBtn"> უკან </button></a>
-            <a href="/education/education.html"><button class="nextBtn"> შემდეგი </button></a>
+            <a href="../private/private.html"><button class="backBtn"> უკან </button></a>
+            <a href="../education/education.html"><button class="nextBtn"> შემდეგი </button></a>
         </footer>
     </div>
     <!-- RightSide -->
     <div id="rightSide">
         <!-- RightSide 1/3 Start -->
-        <img src="/images/Rectangle 9.png" alt="profile imgage" id="profile_img">
+        <img src="../images/Rectangle 9.png" alt="profile imgage" id="profile_img">
         <div class="profile_box">
             <div class="Right_firstName_lastName">
                 <h1>სახელი</h1>
@@ -65,11 +65,11 @@
             </div>
             <div>
                 <div class="phone_mail">
-                    <img src="/icons/mail.svg">
+                    <img src="../icons/mail.svg">
                     <h5 id="mail_value"> solosi@gmail.com </h5>
                 </div>
                 <div class="phone_mail">
-                    <img src="/icons/phone.svg">
+                    <img src="../icons/phone.svg">
                     <h5 id="mobile_value">+995 551 12 34 56</h5>
                 </div>
             </div>
@@ -84,25 +84,25 @@
         <div class="exp_box">
             <h2> გამოცდილება </h2>
             <div class="position_employer">
-                <h3>თანამდებობა</h3>
-                <h3>დამსაქმებელი</h3>
+                <h3 id="position_value">თანამდებობა</h3>
+                <h3 id="employer_value">დამსაქმებელი</h3>
             </div>
             <div class="exp_date">
-                <h4 id="exp_start_date">solosi dawyeba</h4>
+                <h4 id="exp_start_date_value">solosi dawyeba</h4>
                 <h4> - </h4>
-                <h4 id="exp_end_date">solosi damtavreba</h4>
+                <h4 id="exp_end_date_value">solosi damtavreba</h4>
             </div>
             <div class="job_description">
-                <p> Experienced Javascript Native Developer with 5 years in the industry. proficient withreact. Used
+                <p id="job_description_value"> Experienced Javascript Native Developer with 5 years in the industry. proficient withreact. Used
                     problem-solving aptitude to encahge application performance by 14%.created data visualisation tools
                     and integrated designs. </p>
             </div>
         </div>
         <div class="icon">
-            <img src="/icons/LOGO-12 1.svg">
+            <img src="../icons/LOGO-12 1.svg">
         </div>
         <!-- RightSide 2/3 End -->
     </div>
 </body>
-
+<script src="experience.js"> </script>
 </html>
