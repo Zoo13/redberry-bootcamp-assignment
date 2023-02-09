@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/private/private.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/index.html">
+        <div id="back_arrow">
+            <img src="/Icons/Vector.svg">
+        </div>
+    </a>
+    <div id="left_side">
+        <header>
+            <div id="header_box">
+                <h1> პირადი ინფო </h1>
+                <h4> 1/3 </h4>
+            </div>
+        </header>
+        <main>
+            <div class="firstName_lastName">
+                <div class=firstName>
+                    <h3 class="inputDescr"> სახელი </h3>
+                    <input placeholder="სახელი">
+                    <h5 class="validDescr"> მინიმუმ 2 ასო ქართული ასოებით</h5>
+                </div>
+                <div class=lastName>
+                    <h3 class="inputDescr"> გვარი </h3>
+                    <input placeholder="გვარი">
+                    <h5 class="validDescr"> მინიმუმ 2 ასო ქართული ასოებით</h5>
+                </div>
+            </div>
+            <div class="upload_img">
+                <h3>პირადი ფოტოს ატვირთვა</h3>
+                <button id="uploadBtn" onclick="document.getElementById('getFile').click()">ატვირთვა</button>
+                <input type='file' id="getFile" style="display:none">
+            </div>
+            <div class="aboutMe">
+                <h3 class="inputDescr"> ჩემს შესახებ (არასავალდებულო) </h3>
+                <textarea placeholder="ზოგადი ინფო შენს შესახებ"></textarea>
+            </div>
+            <div class="mail">
+                <h3 class="inputDescr"> ელ.ფოსტა </h3>
+                <input placeholder="anzorr666@redberry.ge">
+                <h5 class="validDescr"> უნდა მთავრდებოდეს @reddberry.ge-ით</h5>
+            </div>
+            <div class="mobile">
+                <h3 class="inputDescr"> მობილურის ნომერი </h3>
+                <input placeholder="+995 511 12 34 56">
+                <h5 class="validDescr"> უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</h5>
+            </div>
+        </main>
+        <footer>
+            <a href="../experience/experience.html"><button class="nextBtn"> შემდეგი </button></a>
+        </footer>
+    </div>
+    <!-- RightSide -->
+    <div id="rightSide">
+        <!-- RightSide 1/3 Start -->
+        <img src="/images/Rectangle 9.png" alt="profile imgage" id="profile_img">
+        <div class="profile_box">
+            <div class="Right_firstName_lastName">
+                <h1>სახელი</h1>
+                <h1>გვარი</h1>
+            </div>
+            <div>
+                <div class="phone_mail">
+                    <img src="/icons/mail.svg">
+                    <h5 id="mail_value"> solosi@gmail.com </h5>
+                </div>
+                <div class="phone_mail">
+                    <img src="/icons/phone.svg">
+                    <h5 id="mobile_value">+995 551 12 34 56</h5>
+                </div>
+            </div>
+            <div class="about_box">
+                <h2 id="about_me_title">ჩემ შესახებ</h2>
+                <p id="about_me">ძალიან მიყვარს დიზაინის კეთება. დილით ადრე რომ
+                    ავდგები გამამხნევებელი ვარჯიშების მაგიერ დიზაინს ვაკეთებ. </p>
+            </div>
+        </div>
+        <div class="icon">
+            <img src="/icons/LOGO-12 1.svg">
+        </div>
+        <!-- RightSide 1/3 End -->
+    </div>
+</body>
+</html>
+
+
