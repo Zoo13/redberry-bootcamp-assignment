@@ -157,8 +157,7 @@ input:focus {
 }
 .profile_box {
     width: 662px;
-    border-bottom: 1px solid #C8C8C8;
-    margin: 65px auto 0;
+    margin: 65px auto 19px;
     display: flex;
     flex-direction: column;
 }
