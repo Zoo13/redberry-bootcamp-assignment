@@ -1,3 +1,4 @@
+import { getLastEduNum, buildEducationBox, displayEduFromLocalStorage } from '../education/education';
 
 //  1/3 localStorage ------- > start
 document.getElementById('about_me_title').style.display = 'none'
@@ -204,3 +205,7 @@ document.getElementById('next').addEventListener('click', function () {
   }
   
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    displayEduFromLocalStorage()
+}

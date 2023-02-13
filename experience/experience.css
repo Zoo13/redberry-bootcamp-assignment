@@ -300,6 +300,10 @@ footer {
     height: 42px;
 }
 
-
+#profile_img img {
+    width: 246px;
+    height: 246px;
+    border-radius: 50%;
+}
 
 /* RightSide 2/3 Page style end */

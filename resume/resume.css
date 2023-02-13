@@ -175,3 +175,9 @@ body , h1 , h2 , h3 , h4 , h5 , p {
     height: 42px;
 }
 /* RightSide 3/3 page Style End */
+
+#profile_img img {
+    width: 246px;
+    height: 246px;
+    border-radius: 50%;
+}

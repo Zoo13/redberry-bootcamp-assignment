@@ -349,3 +349,9 @@ footer {
     left: 101.5%;
     top: 39.5%;
 }
+
+#profile_img img {
+    width: 246px;
+    height: 246px;
+    border-radius: 50%;
+}
