@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <a href="../index.html">
+    <a href="../index.html" onclick=clearLocalStorage() >
         <div id="back_arrow">
             <img src="../icons/Vector.svg">
         </div>
@@ -39,7 +40,7 @@
                 </div>
                 <div class=end>
                     <h3 class="inputDescr"> დამთავრების რიცხვი </h3>
-                    <input type="date" id="input_exp_end_date" >
+                    <input type="date" id="input_exp_end_date">
                 </div>
             </div>
             <div class="description">
@@ -50,32 +51,34 @@
         <button id="addDescrBtn"> მეტი გამოცდილების დამატება </button>
         <footer>
             <a href="../private/private.html"><button class="backBtn"> უკან </button></a>
-            <a href="../education/education.html"><button class="nextBtn"> შემდეგი </button></a>
+            <a id="next"><button class="nextBtn"> შემდეგი </button></a>
         </footer>
     </div>
     <!-- RightSide -->
     <div id="rightSide">
         <!-- RightSide 1/3 Start -->
-        <div id="profile_img"></div>
-        <div class="profile_box">
-            <div class="Right_firstName_lastName">
-                <h1 id="firstName_value"></h1>
-                <h1 id="lasttName_value"></h1>
-            </div>
-            <div>
-                <div class="phone_mail">
-                    <img src="../icons/mail.svg" style="display: none;" id="mail_icon">
-                    <h5 id="mail_value"></h5>
+        <div class="profile_box_img">
+            <div class="profile_box">
+                <div class="Right_firstName_lastName">
+                    <h1 id="firstName_value"></h1>
+                    <h1 id="lasttName_value"></h1>
                 </div>
-                <div class="phone_mail">
-                    <img src="../icons/phone.svg" style="display: none;" id="phone_icon">
-                    <h5 id="mobile_value"></h5>
+                <div>
+                    <div class="phone_mail">
+                        <img src="../icons/mail.svg" style="display: none;" id="mail_icon">
+                        <h5 id="mail_value"></h5>
+                    </div>
+                    <div class="phone_mail">
+                        <img src="../icons/phone.svg" style="display: none;" id="phone_icon">
+                        <h5 id="mobile_value"></h5>
+                    </div>
+                </div>
+                <div class="about_box">
+                    <h2 id="about_me_title" style="display: none;">ჩემ შესახებ</h2>
+                    <p id="about_me_value"></p>
                 </div>
             </div>
-            <div class="about_box">
-                <h2 id="about_me_title" style="display: none;">ჩემ შესახებ</h2>
-                <p id="about_me_value"></p>
-            </div>
+            <div id="profile_img"></div>
         </div>
         <!-- RightSide 1/3 End -->
         <!-- RightSide 2/3 Start -->
@@ -101,4 +104,5 @@
     </div>
 </body>
 <script src="experience.js"> </script>
+
 </html>

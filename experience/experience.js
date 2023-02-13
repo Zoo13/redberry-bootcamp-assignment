@@ -73,6 +73,8 @@ inputPosition.addEventListener("input", function() {
     document.getElementById("position_value").innerHTML = positionValue
     experienceTitle.style.display = 'block'
     saveData('position' , positionValue)
+    validation(positionValue)
+    addIcon(validLetter , inputPosition , '.position')
 });
 // employer
 let inputEmployer = document.getElementById('input_employer');
@@ -81,6 +83,9 @@ inputEmployer.addEventListener("input", function() {
   document.getElementById("employer_value").innerHTML = employerValue
   experienceTitle.style.display = 'block'
   saveData('employer',employerValue)
+  validation(employerValue)
+  addIcon(validLetter , inputEmployer , '.employer')
+
 });
 // Job Start Date
 let inputStartDate = document.getElementById('input_exp_start_date');
@@ -90,6 +95,10 @@ inputStartDate.addEventListener("input", function() {
   experienceTitle.style.display = 'block'
   dash.style.display = 'block'
   saveData('job_start' , startDateValue)
+  if(startDateValue != 'undefind'){
+    inputStartDate.style.borderColor = '#98E37E'
+    inputStartDate.style.outlineColor = '#98E37E'
+  }
 });
 // Job End Date
 let inputEndDate = document.getElementById('input_exp_end_date');
@@ -99,6 +108,10 @@ inputEndDate.addEventListener("input", function() {
   experienceTitle.style.display = 'block'
   dash.style.display = 'block'
   saveData('job_end' , endDateValue)
+  if(endDateValue != 'undefind'){
+    inputEndDate.style.borderColor = '#98E37E'
+    inputEndDate.style.outlineColor = '#98E37E'
+  }
 });
 // Job Description
 let inputJobDescription = document.getElementById('input_job_description');
@@ -107,6 +120,11 @@ inputJobDescription.addEventListener("input", function() {
   document.getElementById("job_description_value").innerHTML = jobDescriptionValue
   experienceTitle.style.display = 'block'
   saveData('job_descr' , jobDescriptionValue)
+  if(jobDescriptionValue.length > 0 ){
+    inputJobDescription.style.borderColor = '#98E37E'
+    inputJobDescription.style.outlineColor = '#98E37E'
+  }
+
 });
 
 
@@ -116,3 +134,73 @@ function saveData(k , v) {
 }
 
 
+
+// Validation 
+let validLetter = false
+
+function validation(word) {
+  if (word.length >= 2) {
+        validLetter = true
+      } else {
+        validLetter = false
+      }
+    }
+
+
+
+
+
+
+// create Element img for Valid And Invalid Icons 
+const invalid_icon = document.createElement("img");
+invalid_icon.src = "../icons/invalid.svg";
+invalid_icon.setAttribute("class", "invalid_icon")
+
+const valid_icon = document.createElement("img");
+valid_icon.src = "../icons/valid.svg";
+valid_icon.setAttribute("class", "valid_icon")
+
+
+function addIcon(valid, input, selector) {
+  if (valid == true) {
+    document.querySelector(selector).appendChild(valid_icon)
+    input.style.borderColor = '#98E37E'
+    input.style.outlineColor = '#98E37E'
+    if (document.querySelector(selector).contains(invalid_icon)) {
+      document.querySelector(selector).removeChild(invalid_icon)
+    }
+  } else {
+    input.style.borderColor = '#EF5050'
+    input.style.outlineColor = '#EF5050'
+    document.querySelector(selector).appendChild(invalid_icon)
+    if (document.querySelector(selector).contains(valid_icon)) {
+      document.querySelector(selector).removeChild(valid_icon)
+    }
+  }
+}
+
+
+
+// clear local storage
+function clearLocalStorage() {
+  localStorage.clear()
+}
+
+
+// Next button validations must be true
+let success = false
+function chekAllvalidation () {
+  if (validLetter == true) {
+    success = true
+  } else {
+    success = false
+  }
+}
+
+document.getElementById('next').addEventListener('click', function () {
+  chekAllvalidation ()
+  if(success == true) {
+    document.getElementById('next').setAttribute("href", "../education/education.html")
+  }
+  
+})

@@ -97,6 +97,8 @@ inputInstitute.addEventListener("input", function() {
     document.getElementById("institute_value").innerHTML = instituteValue
     educationTitle.style.display = 'block'
     saveData('institute' , instituteValue)
+    validation(instituteValue)
+    addIcon(validLetter , inputInstitute , '.institute')
 });
 
 // Degree
@@ -106,6 +108,10 @@ inputDegree.addEventListener("input", function() {
     document.getElementById("degree_value").innerHTML = degreeValue
     educationTitle.style.display = 'block'
     saveData('degree' , degreeValue)
+    if(degreeValue.length > 0 ){
+      inputDegree.style.borderColor = '#98E37E'
+      inputDegree.style.outlineColor = '#98E37E'
+    }
 });
 
 // Education End Date
@@ -115,6 +121,10 @@ inputEducEndDate.addEventListener("input", function() {
     document.getElementById("educ_date_value").innerHTML = educEndDateValue
     educationTitle.style.display = 'block'
     saveData('educ_date',educEndDateValue)
+    if(educEndDateValue.length > 0 ){
+      inputEducEndDate.style.borderColor = '#98E37E'
+      inputEducEndDate.style.outlineColor = '#98E37E'
+    }
 });
 
 // Education Description
@@ -124,9 +134,78 @@ inputEducDescription.addEventListener("input", function() {
     document.getElementById("educ_description_value").innerHTML = educDescrValue
     educationTitle.style.display = 'block'
     saveData('educ_descr' , educDescrValue)
+    if(educDescrValue.length > 0 ){
+      inputEducDescription.style.borderColor = '#98E37E'
+      inputEducDescription.style.outlineColor = '#98E37E'
+    }
 });
 
 // Save Data in local Storage
 function saveData(k , v) {
     window.localStorage.setItem(k , v)
   }
+
+
+// Validation
+let validLetter = false
+function validation(word) {
+  if (word.length >= 2) {
+        validLetter = true
+      } else {
+        validLetter = false
+      }
+    }
+
+// create Element img for Valid And Invalid Icons 
+const invalid_icon = document.createElement("img");
+invalid_icon.src = "../icons/invalid.svg";
+invalid_icon.setAttribute("class", "invalid_icon")
+
+const valid_icon = document.createElement("img");
+valid_icon.src = "../icons/valid.svg";
+valid_icon.setAttribute("class", "valid_icon")
+
+
+function addIcon(valid, input, selector) {
+  if (valid == true) {
+    document.querySelector(selector).appendChild(valid_icon)
+    input.style.borderColor = '#98E37E'
+    input.style.outlineColor = '#98E37E'
+    if (document.querySelector(selector).contains(invalid_icon)) {
+      document.querySelector(selector).removeChild(invalid_icon)
+    }
+  } else {
+    input.style.borderColor = '#EF5050'
+    input.style.outlineColor = '#EF5050'
+    document.querySelector(selector).appendChild(invalid_icon)
+    if (document.querySelector(selector).contains(valid_icon)) {
+      document.querySelector(selector).removeChild(valid_icon)
+    }
+  }
+}
+
+
+// clear local storage
+function clearLocalStorage() {
+  localStorage.clear()
+}
+
+
+
+// Next button validations must be true
+let success = false
+function chekAllvalidation () {
+  if (validLetter == true) {
+    success = true
+  } else {
+    success = false
+  }
+}
+
+document.getElementById('next').addEventListener('click', function () {
+  chekAllvalidation ()
+  if(success == true) {
+    document.getElementById('next').setAttribute("href", "../resume/resume.html")
+  }
+  
+})

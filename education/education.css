@@ -82,6 +82,7 @@ textarea {
 }
 .institute  {
     margin-bottom: 31px;
+    position: relative;
 }
 .description {
     margin-bottom: 54px;
@@ -158,8 +159,6 @@ footer {
 
 
 
-
-
 /* RightSide 1/3 Page Style start*/
 
 #rightSide {
@@ -167,8 +166,7 @@ footer {
     position: relative;
 }
 .profile_box {
-    width: 662px;
-    margin: 65px auto 19px;
+    margin: 65px auto 0px;
     display: flex;
     flex-direction: column;
 }
@@ -204,7 +202,10 @@ footer {
     font-size: 16px;
     font-weight: 400;
 }
-#about_me {
+.aboutMe {
+    position: relative;
+}
+#about_me_value {
     margin-top: 24px;
 }
 #about_me_title{
@@ -213,16 +214,37 @@ footer {
 .about_box {
     width: 432px;
 }
-#about_me_value {
-    margin-top: 24px;
-}
 #profile_img {
     width: 246px;
     height: 246px;
-    position: absolute;
     right: 75px;
     top: 48px;
 }
+
+.profile_box_img{
+    display: flex;
+    width: 662px;
+    margin: auto;
+
+}
+#profile_img {  
+    width: 100%;
+    height: 100%; 
+    display: block;
+    border-radius: 50%;
+    margin-top: 48px;
+  }
+
+.icon img {
+    position: absolute;
+    bottom: 44px;
+    left: 77px;
+    width: 42px;
+    height: 42px;
+}
+
+
+
 /* RightSide 1/3 Page Style end */
 
 
@@ -232,18 +254,21 @@ footer {
 .exp_box {
     width: 662px;
     border-top: 1px solid #C8C8C8;
-    margin: 47px auto 0;
+    margin: 19px auto 0;
     display: flex;
     flex-direction: column;
     padding: 24px 0 0 0;
 }
+
 .position_employer {
     display: flex;
     gap: 7px;
     margin-top: 15px;
     margin-bottom: 7px;
 }
-
+.employer {
+    position: relative;
+}
 .exp_date {
     display: flex;
     gap: 10px;
@@ -255,11 +280,21 @@ footer {
     font-style: italic;
     font-weight: 400;
 }
+
 .job_description {
     margin-bottom: 32px;
 }
-/* RightSide 2/3 Page style end */
+.icon img {
+    position: absolute;
+    bottom: 44px;
+    left: 77px;
+    width: 42px;
+    height: 42px;
+}
 
+
+
+/* RightSide 2/3 Page style end */
 
 /* RightSide 3/3 page Style Start */
 
@@ -298,4 +333,19 @@ footer {
     width: 42px;
     height: 42px;
 }
+
 /* RightSide 3/3 page Style End */
+
+
+.valid_icon {
+    position: absolute;
+    top: 42%;
+    left: 96%;
+}
+
+
+.invalid_icon {
+    position: absolute;
+    left: 101.5%;
+    top: 39.5%;
+}
